@@ -2,40 +2,68 @@
 
 ## About the Project
 
-Digital Chaos Score is a simple Python project that calculates a chaos score based on changes between numbers entered by the user.
+Digital Chaos Score is a simple Python project that calculates a score based on the changes between numbers entered by the user.
 
-The program analyzes the input, calculates a score, interprets the result, and saves it to a text file.
+The program calculates the score, displays a status, and saves the result in a text file.
 
 ## Features
 
 * Calculate a chaos score from a list of numbers
-* Interpret the score as Calm, Moderate, or Chaotic
-* Save results to a text file
+* Classify the result as Calm, Moderate, or Chaotic
+* Save the result to a text file
 * Handle invalid user input
 * Allow multiple calculations in one session
+* Exit the program by typing `exit`
 
 ## Technologies
 
 * Python
-* File Handling (TXT)
 * Functions and Loops
+* File Handling
+* Exception Handling
 
 ## How It Works
 
 1. The user enters numbers separated by spaces.
 2. The program calculates the differences between consecutive numbers.
-3. A chaos score is calculated.
-4. The program displays an interpretation.
-5. The result is saved to `chaos_result.txt`.
+3. The program calculates the chaos score.
+4. The score is interpreted as Calm, Moderate, or Chaotic.
+5. The result is displayed in the terminal.
+6. The result is saved to `chaos_result.txt`.
 
 ## How to Run
 
 1. Install Python.
-2. Clone or download this repository.
-3. Open a terminal in the project folder.
-4. Run:
 
-   `python main.py`
+2. Download or clone this repository.
+
+3. Open the project folder in a terminal.
+
+4. Run the following command:
+
+   ```bash
+   python main.py
+   ```
+
+5. Enter at least two numbers separated by spaces.
+
+6. Type `exit` to close the program.
+
+## Example
+
+**Input:**
+
+```text
+10 20 30 40
+```
+
+**Output:**
+
+```text
+Chaos Score: 100.0
+Status: Chaotic
+Result saved successfully.
+```
 
 ## Project Structure
 
@@ -46,11 +74,11 @@ digital-chaos-score/
 └── README.md
 ```
 
-*Note: The project structure may change during development.*
+Note: `chaos_result.txt` is created automatically when a result is saved.
 
 ## Team
 
-Developed as a team project to practice Python functions, loops, file handling, and automation.
+This project is developed as a team project to practice basic Python programming, functions, loops, and file handling.
 
 ## Project Status
 
