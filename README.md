@@ -79,7 +79,3 @@ Note: `chaos_result.txt` is created automatically when a result is saved.
 ## Team
 
 This project is developed as a team project to practice basic Python programming, functions, loops, and file handling.
-
-## Project Status
-
-In development.
