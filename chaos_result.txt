@@ -1,0 +1,16 @@
+Input numbers: [99.0, 99.0]
+Chaos Score: 0
+Status: Calm
+------------------
+Input list: [10.0, 20.0, 30.0, 40.0, 50.0]
+Chaos Score: 100.0
+Status: Chaotic
+--------------------
+Input list: [99.0, 999.0]
+Chaos Score: 100.0
+Status: Chaotic
+--------------------
+Input list: [44.0, 99.0, 66.0, 0.0]
+Chaos Score: 77.8
+Status: Chaotic
+--------------------
