@@ -1,0 +1,20 @@
+Numbers: [10.0, 20.0, 30.0, 40.0, 50.0]
+Score: 0.0
+Level: Low Change
+
+Numbers: [50.0, 40.0, 30.0, 20.0, 10.0]
+Score: 0.0
+Level: Low Change
+
+Numbers: [10.0, 20.0, 10.0, 20.0, 10.0]
+Score: 100.0
+Level: High Change
+
+Numbers: [10.0, 20.0, 30.0, 20.0, 10.0]
+Score: 33.3
+Level: Medium Change
+
+Numbers: [10.0, 10.0, 10.0, 10.0]
+Score: 0
+Level: Low Change
+

@@ -24,17 +24,17 @@ def calculate_score(numbers):
 
 def find_level(score):
     if score < 25:
-        return "Calm"
+        return "Low Change"
     elif score < 75:
-        return "Moderate"
+        return "Medium Change"
     else:
-        return "Chaotic"
+        return "High Change"
 
 
 def save_result(numbers, score, level):
-    with open("chaos_results.txt", "a") as file:
+    with open("score_results.txt", "a") as file:
         file.write("Numbers: " + str(numbers) + "\n")
-        file.write("Chaos Score: " + str(score) + "\n")
+        file.write("Score: " + str(score) + "\n")
         file.write("Level: " + level + "\n\n")
 
 
@@ -57,7 +57,7 @@ while True:
         score = calculate_score(numbers)
         level = find_level(score)
 
-        print("Chaos Score:", score)
+        print("Score:", score)
         print("Level:", level)
 
         save_result(numbers, score, level)

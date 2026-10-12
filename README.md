@@ -1,66 +1,44 @@
 # Digital Chaos Score
 
-A simple Python tool that calculates a chaos score based on changes
-between increasing and decreasing numbers.
+A simple Python project that calculates a score based on direction changes in a list of numbers.
 
 ## How It Works
 
-The program compares consecutive numbers and counts how often
-their direction changes.
+The program checks whether the numbers switch from increasing to decreasing or from decreasing to increasing.
 
-Chaos Score = (Direction Changes / Direction Comparisons) × 100
+Score = (Direction Changes / Comparisons) × 100
 
-Equal numbers are skipped when checking direction.
-
-This score is a simple rule defined for this project,
-not a scientific measure of chaos.
+Equal consecutive numbers are skipped.
 
 ## Levels
 
-- Calm: score below 25
-- Moderate: score from 25 to below 75
-- Chaotic: score from 75 to 100
+- **Low Change:** Score below 25
+- **Medium Change:** Score from 25 to below 75
+- **High Change:** Score of 75 or above
 
 ## Features
 
-- Accepts numbers entered by the user
-- Calculates a score from 0 to 100
-- Displays the level
-- Automatically saves valid results to chaos_result.txt
-- Keeps previous results
-- Handles invalid input
-
-## Requirements
-
-- Python 3
-- No additional libraries are required
+- Accepts at least three numbers.
+- Calculates a score between 0 and 100.
+- Displays the change level.
+- Saves results to `score_results.txt`.
+- Handles invalid input.
+- Runs until the user enters `q`.
 
 ## How to Run
 
-1. Download the project.
-2. Open a terminal in the project folder.
-3. Run:
+1. Install Python.
+2. Run `python main.py`.
+3. Enter numbers separated by spaces.
+4. Type `q` to quit.
 
-   python main.py
+## Example
 
-4. Enter at least three numbers separated by spaces.
-5. Type q to quit.
+Input: `10 20 30 20 10`
 
-## Examples
-
-| Input | Score | Level |
-|-------|-------|-------|
-| 10 20 30 | 0.0 | Calm |
-| 10 20 30 20 | 50.0 | Moderate |
-| 10 20 10 | 100.0 | Chaotic |
-| 5 5 5 | 0 | Calm |
-
-## Project Files
-
-- main.py: program code
-- chaos_result.txt: saved results
-- README.md: project description
+Chaos Score: 33.3  
+Level: Medium Change
 
 ## Skills Used
 
-Functions, loops, lists, user input, error handling, and file operations.
+Functions, loops, lists, conditions, error handling and file operations.
