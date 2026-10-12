@@ -1,81 +1,66 @@
 # Digital Chaos Score
 
-## About the Project
-
-Digital Chaos Score is a simple Python project that calculates a score based on the changes between numbers entered by the user.
-
-The program calculates the score, displays a status, and saves the result in a text file.
-
-## Features
-
-* Calculate a chaos score from a list of numbers
-* Classify the result as Calm, Moderate, or Chaotic
-* Save the result to a text file
-* Handle invalid user input
-* Allow multiple calculations in one session
-* Exit the program by typing `exit`
-
-## Technologies
-
-* Python
-* Functions and Loops
-* File Handling
-* Exception Handling
+A simple Python tool that calculates a chaos score based on changes
+between increasing and decreasing numbers.
 
 ## How It Works
 
-1. The user enters numbers separated by spaces.
-2. The program calculates the differences between consecutive numbers.
-3. The program calculates the chaos score.
-4. The score is interpreted as Calm, Moderate, or Chaotic.
-5. The result is displayed in the terminal.
-6. The result is saved to `chaos_result.txt`.
+The program compares consecutive numbers and counts how often
+their direction changes.
+
+Chaos Score = (Direction Changes / Direction Comparisons) × 100
+
+Equal numbers are skipped when checking direction.
+
+This score is a simple rule defined for this project,
+not a scientific measure of chaos.
+
+## Levels
+
+- Calm: score below 25
+- Moderate: score from 25 to below 75
+- Chaotic: score from 75 to 100
+
+## Features
+
+- Accepts numbers entered by the user
+- Calculates a score from 0 to 100
+- Displays the level
+- Automatically saves valid results to chaos_result.txt
+- Keeps previous results
+- Handles invalid input
+
+## Requirements
+
+- Python 3
+- No additional libraries are required
 
 ## How to Run
 
-1. Install Python.
+1. Download the project.
+2. Open a terminal in the project folder.
+3. Run:
 
-2. Download or clone this repository.
-
-3. Open the project folder in a terminal.
-
-4. Run the following command:
-
-   ```bash
    python main.py
-   ```
 
-5. Enter at least two numbers separated by spaces.
+4. Enter at least three numbers separated by spaces.
+5. Type q to quit.
 
-6. Type `exit` to close the program.
+## Examples
 
-## Example
+| Input | Score | Level |
+|-------|-------|-------|
+| 10 20 30 | 0.0 | Calm |
+| 10 20 30 20 | 50.0 | Moderate |
+| 10 20 10 | 100.0 | Chaotic |
+| 5 5 5 | 0 | Calm |
 
-**Input:**
+## Project Files
 
-```text
-10 20 30 40
-```
+- main.py: program code
+- chaos_result.txt: saved results
+- README.md: project description
 
-**Output:**
+## Skills Used
 
-```text
-Chaos Score: 100.0
-Status: Chaotic
-Result saved successfully.
-```
-
-## Project Structure
-
-```text
-digital-chaos-score/
-├── main.py
-├── chaos_result.txt
-└── README.md
-```
-
-Note: `chaos_result.txt` is created automatically when a result is saved.
-
-## Team
-
-This project is developed as a team project to practice basic Python programming, functions, loops, and file handling.
+Functions, loops, lists, user input, error handling, and file operations.

@@ -1,65 +1,67 @@
+def calculate_score(numbers):
+    changes = 0
+    comparisons = 0
+    previous = 0
 
-def chaos_score_calculate(data):
-    if len(data) < 2:
-        print("Please enter at least two numbers.")
-        return None
+    for i in range(len(numbers) - 1):
+        difference = numbers[i + 1] - numbers[i]
 
-    changes = []
+        if difference != 0:
+            if previous != 0:
+                comparisons += 1
 
-    for i in range(len(data) - 1):
-        difference = abs(data[i + 1] - data[i])
-        changes.append(difference)
+                if difference * previous < 0:
+                    changes += 1
 
-    average = sum(changes) / len(changes)
-    biggest = max(changes)
+            previous = difference
 
-    if biggest == 0:
+    if comparisons == 0:
         return 0
 
-    score = (average / biggest) * 100
-
+    score = (changes / comparisons) * 100
     return round(score, 1)
 
 
-def interpret_chaos(score):
-    if score < 30:
-        return "Status: Calm"
-    elif score < 70:
-        return "Status: Moderate"
+def find_level(score):
+    if score < 25:
+        return "Calm"
+    elif score < 75:
+        return "Moderate"
     else:
-        return "Status: Chaotic"
+        return "Chaotic"
 
 
-def save_result(data, score, status):
-    with open("chaos_result.txt", "a", encoding="utf-8") as file:
-        file.write("Input list: " + str(data) + "\n")
+def save_result(numbers, score, level):
+    with open("chaos_results.txt", "a") as file:
+        file.write("Numbers: " + str(numbers) + "\n")
         file.write("Chaos Score: " + str(score) + "\n")
-        file.write(status + "\n")
-        file.write("--------------------\n")
-
-    print("Result saved successfully.")
+        file.write("Level: " + level + "\n\n")
 
 
 while True:
-    user_input = input(
-        "Enter numbers separated by spaces (or type 'exit' to quit): "
-    ).strip()
+    text = input("Enter numbers or type q to quit: ")
 
-    if user_input.lower() == "exit":
-        print("Goodbye.")
+    if text.strip().lower() == "q":
         break
 
     try:
-        data = [float(x) for x in user_input.split()]
-        score = chaos_score_calculate(data)
+        numbers = []
 
-        if score is not None:
-            status = interpret_chaos(score)
+        for value in text.split():
+            numbers.append(float(value))
 
-            print("Chaos Score:", score)
-            print(status)
+        if len(numbers) < 3:
+            print("Please enter at least three numbers.")
+            continue
 
-            save_result(data, score, status)
+        score = calculate_score(numbers)
+        level = find_level(score)
+
+        print("Chaos Score:", score)
+        print("Level:", level)
+
+        save_result(numbers, score, level)
+        print("Result saved.")
 
     except ValueError:
         print("Please enter only numbers.")

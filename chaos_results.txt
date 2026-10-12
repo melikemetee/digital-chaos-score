@@ -1,0 +1,24 @@
+Numbers: [10.0, 20.0, 10.0]
+Chaos Score: 100.0
+Level: Chaotic
+
+Numbers: [-10.0, 0.0, -10.0]
+Chaos Score: 100.0
+Level: Chaotic
+
+Numbers: [10.0, 20.0, 30.0, 20.0, 10.0]
+Chaos Score: 33.3
+Level: Moderate
+
+Numbers: [10.0, 20.0, 10.0, 20.0, 10.0, 0.0]
+Chaos Score: 75.0
+Level: Chaotic
+
+Numbers: [5.0, 5.0, 5.0, 5.0]
+Chaos Score: 0
+Level: Calm
+
+Numbers: [70.0, 60.0, 50.0, 40.0]
+Chaos Score: 0.0
+Level: Calm
+
